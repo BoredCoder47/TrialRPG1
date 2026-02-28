@@ -1,0 +1,807 @@
+{
+  "firebolt": {
+    "id": "firebolt",
+    "name": "Firebolt",
+    "kind": "damage",
+    "cost": 4,
+    "powerMult": 1.6,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "ice-spike": {
+    "id": "ice-spike",
+    "name": "Ice Spike",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 2.1,
+    "damageType": "magical",
+    "element": "ice",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 2,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -2, "turns": 2 }
+    ]
+  },
+
+  "heal": {
+    "id": "heal",
+    "name": "Heal",
+    "kind": "heal",
+    "cost": 5,
+    "healAmount": 7,
+    "target": "single",
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "greater-heal": {
+    "id": "greater-heal",
+    "name": "Greater Heal",
+    "kind": "heal",
+    "cost": 12,
+    "healAmount": 20,
+    "target": "single",
+    "cooldown": 3,
+    "effects": []
+  },
+
+  "shield": {
+    "id": "shield",
+    "name": "Shield",
+    "kind": "heal",
+    "cost": 6,
+    "healAmount": 50,
+    "target": "self",
+    "cooldown": 3,
+    "effects": [
+      { "type": "buff", "stat": "def", "value": 25, "turns": 3 }
+    ]
+  },
+
+  "rock-shot": {
+    "id": "rock-shot",
+    "name": "Rock Shot",
+    "kind": "damage",
+    "cost": 4,
+    "powerMult": 1.8,
+    "damageType": "physical",
+    "element": "earth",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": [
+      { "type": "debuff", "stat": "atk", "value": -5, "turns": 3 }
+    ]
+  },
+
+  "smash": {
+    "id": "smash",
+    "name": "Smash",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 2.0,
+    "damageType": "physical",
+    "element": "earth",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 0,
+    "effects": []
+  },
+
+  "ground-slam": {
+    "id": "ground-slam",
+    "name": "Ground Slam",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.4,
+    "damageType": "physical",
+    "element": "earth",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -3, "turns": 2 }
+    ]
+  },
+
+  "dark-orb": {
+    "id": "dark-orb",
+    "name": "Dark Orb",
+    "kind": "damage",
+    "cost": 7,
+    "powerMult": 2.3,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": []
+  },
+
+  "shadow-bolt": {
+    "id": "shadow-bolt",
+    "name": "Shadow Bolt",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 2.6,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "dot", "id": "shadow", "value": 4, "turns": 3 }
+    ]
+  },
+
+
+  "void-blast": {
+    "id": "void-blast",
+    "name": "Void Blast",
+    "kind": "damage",
+    "cost": 14,
+    "powerMult": 3.2,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 4,
+    "effects": [
+      { "type": "debuff", "stat": "mDef", "value": -4, "turns": 3 }
+    ]
+  },
+
+  "summon-skeletons": {
+    "id": "summon-skeletons",
+    "name": "Summon Skeletons",
+    "kind": "damage",
+    "cost": 12,
+    "powerMult": 0,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 5,
+    "effects": [ { "type": "summon", "id": "skeleton", "count": 2, "levelOffset": -1 }]
+  },
+
+  "curse": {
+    "id": "curse",
+    "name": "Curse",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 1.2,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "debuff", "stat": "atk", "value": -4, "turns": 4 }
+    ]
+  },
+
+  "poison-cloud": {
+    "id": "poison-cloud",
+    "name": "Poison Cloud",
+    "kind": "damage",
+    "cost": 7,
+    "powerMult": 1.2,
+    "damageType": "magical",
+    "element": "poison",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "dot", "id": "poison", "value": 2, "turns": 3 }
+    ]
+  },
+
+  "split": {
+    "id": "split",
+    "name": "Split",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 0,
+    "damageType": "physical",
+    "element": "water",
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 5,
+    "effects": [  { "type": "summon", "id": "slime", "count": 2, "levelOffset": -2 }]
+  },
+
+  "gel-burst": {
+    "id": "gel-burst",
+    "name": "Gel Burst",
+    "kind": "damage",
+    "cost": 9,
+    "powerMult": 1.4,
+    "damageType": "magical",
+    "element": "water",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "acid", "value": 2, "turns": 3 }
+    ]
+  },
+
+  "regenerate": {
+    "id": "regenerate",
+    "name": "Regenerate",
+    "kind": "heal",
+    "cost": 6,
+    "healAmount": 0,
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "buff", "stat": "hp_regen", "value": 5, "turns": 4 }
+    ]
+  },
+
+  "multi-shot": {
+    "id": "multi-shot",
+    "name": "Multi Shot",
+    "kind": "damage",
+    "cost": 5,
+    "powerMult": 1.5,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "piercing-shot": {
+    "id": "piercing-shot",
+    "name": "Piercing Shot",
+    "kind": "damage",
+    "cost": 5,
+    "powerMult": 1.9,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -3, "turns": 2 }
+    ]
+  },
+
+  "cleave": {
+    "id": "cleave",
+    "name": "Cleave",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.8,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 2,
+    "effects": []
+  },
+
+  "feral-lunge": {
+    "id": "feral-lunge",
+    "name": "Feral Lunge",
+    "kind": "damage",
+    "cost": 4,
+    "powerMult": 2.0,
+    "damageType": "physical",
+    "element": "beast",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -2, "turns": 2 }
+    ]
+  },
+
+  "steal": {
+    "id": "steal",
+    "name": "Steal",
+    "kind": "damage",
+    "cost": 3,
+    "powerMult": 0.8,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "debuff", "stat": "gold_loss", "value": -1, "turns": 0 }
+    ]
+  },
+
+  "wind-screech": {
+    "id": "wind-screech",
+    "name": "Wind Screech",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.4,
+    "damageType": "magical",
+    "element": "wind",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "stun", "turns": 1 }
+    ]
+  },
+
+  "talon-strike": {
+    "id": "talon-strike",
+    "name": "Talon Strike",
+    "kind": "damage",
+    "cost": 5,
+    "powerMult": 1.6,
+    "damageType": "physical",
+    "element": "wind",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "bone-arrow": {
+    "id": "bone-arrow",
+    "name": "Bone Arrow",
+    "kind": "damage",
+    "cost": 5,
+    "powerMult": 1.6,
+    "damageType": "physical",
+    "element": "undead",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "phase-strike": {
+    "id": "phase-strike",
+    "name": "Phase Strike",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 2.0,
+    "damageType": "physical",
+    "element": "dark",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "debuff", "stat": "mDef", "value": -3, "turns": 2 }
+    ]
+  },
+
+
+  "drain": {
+    "id": "drain",
+    "name": "Drain",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.2,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "dot", "id": "drain_dot", "value": 2, "turns": 2 }
+    ]
+  },
+
+  "glacial-smash": {
+    "id": "glacial-smash",
+    "name": "Glacial Smash",
+    "kind": "damage",
+    "cost": 10,
+    "powerMult": 2.4,
+    "damageType": "physical",
+    "element": "ice",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 3,
+    "effects": [
+      { "type": "stun", "turns": 1 }
+    ]
+  },
+
+  "frost-breath": {
+    "id": "frost-breath",
+    "name": "Frost Breath",
+    "kind": "damage",
+    "cost": 10,
+    "powerMult": 2.6,
+    "damageType": "magical",
+    "element": "ice",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "chill", "value": 3, "turns": 3 }
+    ]
+  },
+
+  "tail-sweep": {
+    "id": "tail-sweep",
+    "name": "Tail Sweep",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.6,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 2,
+    "effects": []
+  },
+
+  "burn": {
+    "id": "burn",
+    "name": "Burn",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 1.4,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 2,
+    "effects": [
+      { "type": "dot", "id": "burn", "value": 3, "turns": 3 }
+    ]
+  },
+
+  "firebolt_small": {
+    "id": "firebolt_small",
+    "name": "Firebolt (Small)",
+    "kind": "damage",
+    "cost": 2,
+    "powerMult": 1.1,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 0,
+    "effects": []
+  },
+
+  "lava-burst": {
+    "id": "lava-burst",
+    "name": "Lava Burst",
+    "kind": "damage",
+    "cost": 10,
+    "powerMult": 2.8,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "magma", "value": 4, "turns": 3 }
+    ]
+  },
+
+  "ash-field": {
+    "id": "ash-field",
+    "name": "Ash Field",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 1.0,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 4,
+    "effects": [
+      { "type": "dot", "id": "ash", "value": 2, "turns": 4 }
+    ]
+  },
+
+  "inferno": {
+    "id": "inferno",
+    "name": "Inferno",
+    "kind": "damage",
+    "cost": 18,
+    "powerMult": 3.6,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 5,
+    "effects": [
+      { "type": "dot", "id": "inferno_burn", "value": 6, "turns": 4 }
+    ]
+  },
+
+  "magma-wave": {
+    "id": "magma-wave",
+    "name": "Magma Wave",
+    "kind": "damage",
+    "cost": 14,
+    "powerMult": 2.8,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 4,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -5, "turns": 3 }
+    ]
+  },
+
+  "flame-aura": {
+    "id": "flame-aura",
+    "name": "Flame Aura",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 0,
+    "damageType": "passive",
+    "element": "fire",
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 0,
+    "effects": [
+      { "type": "dot", "id": "aura_burn", "value": 2, "turns": 0 }
+    ]
+  },
+
+  "water-bolt": {
+    "id": "water-bolt",
+    "name": "Water Bolt",
+    "kind": "damage",
+    "cost": 6,
+    "powerMult": 1.8,
+    "damageType": "magical",
+    "element": "water",
+    "target": "single",
+    "canCrit": true,
+    "cooldown": 1,
+    "effects": []
+  },
+
+  "tide-crush": {
+    "id": "tide-crush",
+    "name": "Tide Crush",
+    "kind": "damage",
+    "cost": 12,
+    "powerMult": 2.6,
+    "damageType": "physical",
+    "element": "water",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "debuff", "stat": "atk", "value": -6, "turns": 2 }
+    ]
+  },
+
+  "ink-cloud": {
+    "id": "ink-cloud",
+    "name": "Ink Cloud",
+    "kind": "damage",
+    "cost": 8,
+    "powerMult": 0.6,
+    "damageType": "magical",
+    "element": "water",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "debuff", "stat": "dex", "value": -6, "turns": 2 }
+    ]
+  },
+
+  "tsunami": {
+    "id": "tsunami",
+    "name": "Tsunami",
+    "kind": "damage",
+    "cost": 22,
+    "powerMult": 4.0,
+    "damageType": "magical",
+    "element": "water",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 6,
+    "effects": [
+      { "type": "debuff", "stat": "def", "value": -8, "turns": 3 }
+    ]
+  },
+
+  "electric-storm": {
+    "id": "electric-storm",
+    "name": "Electric Storm",
+    "kind": "damage",
+    "cost": 20,
+    "powerMult": 3.4,
+    "damageType": "magical",
+    "element": "lightning",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 5,
+    "effects": [
+      { "type": "stun", "turns": 1 }
+    ]
+  },
+
+  "maw-bite": {
+    "id": "maw-bite",
+    "name": "Maw Bite",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 3.0,
+    "damageType": "physical",
+    "element": "water",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 0,
+    "effects": []
+  },
+
+  "drown": {
+    "id": "drown",
+    "name": "Drown",
+    "kind": "damage",
+    "cost": 10,
+    "powerMult": 2.2,
+    "damageType": "magical",
+    "element": "water",
+    "target": "single",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "drown", "value": 3, "turns": 3 }
+    ]
+  },
+
+  "spectral-wave": {
+    "id": "spectral-wave",
+    "name": "Spectral Wave",
+    "kind": "damage",
+    "cost": 9,
+    "powerMult": 2.2,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "spectral", "value": 3, "turns": 3 }
+    ]
+  },
+
+  "phase-shield": {
+    "id": "phase-shield",
+    "name": "Phase Shield",
+    "kind": "heal",
+    "cost": 8,
+    "healAmount": 0,
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 4,
+    "effects": [
+      { "type": "buff", "stat": "mDef", "value": 8, "turns": 3 },
+      { "type": "buff", "stat": "def", "value": 8, "turns": 3 }
+    ]
+  },
+
+  "spectral-blast": {
+    "id": "spectral-blast",
+    "name": "Spectral Blast",
+    "kind": "damage",
+    "cost": 10,
+    "powerMult": 2.6,
+    "damageType": "magical",
+    "element": "dark",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "debuff", "stat": "atk", "value": -6, "turns": 2 }
+    ]
+  },
+
+  "ember-storm": {
+    "id": "ember-storm",
+    "name": "Ember Storm",
+    "kind": "damage",
+    "cost": 12,
+    "powerMult": 2.4,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "dot", "id": "ember", "value": 3, "turns": 3 }
+    ]
+  },
+
+  "tail-flame": {
+    "id": "tail-flame",
+    "name": "Tail Flame",
+    "kind": "damage",
+    "cost": 9,
+    "powerMult": 2.0,
+    "damageType": "physical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": true,
+    "cooldown": 2,
+    "effects": []
+  },
+
+  "flame-breath": {
+    "id": "flame-breath",
+    "name": "Flame Breath",
+    "kind": "damage",
+    "cost": 14,
+    "powerMult": 3.0,
+    "damageType": "magical",
+    "element": "fire",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 4,
+    "effects": [
+      { "type": "dot", "id": "flameburn", "value": 5, "turns": 3 }
+    ]
+  },
+
+  "winggust": {
+    "id": "winggust",
+    "name": "Winggust",
+    "kind": "damage",
+    "cost": 4,
+    "powerMult": 1.2,
+    "damageType": "physical",
+    "element": "wind",
+    "target": "aoe",
+    "canCrit": false,
+    "cooldown": 1,
+    "effects": [
+      { "type": "debuff", "stat": "dex", "value": -4, "turns": 2 }
+    ]
+  },
+
+  "feral-roar": {
+    "id": "feral-roar",
+    "name": "Feral Roar",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 0,
+    "damageType": "physical",
+    "element": "beast",
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "buff", "stat": "atk", "value": 6, "turns": 3 }
+    ]
+  },
+
+  "war-cry": {
+    "id": "war-cry",
+    "name": "War Cry",
+    "kind": "damage",
+    "cost": 0,
+    "powerMult": 0,
+    "damageType": "physical",
+    "element": "physical",
+    "target": "self",
+    "canCrit": false,
+    "cooldown": 3,
+    "effects": [
+      { "type": "buff", "stat": "atk", "value": 8, "turns": 3 }
+    ]
+  }
+}
